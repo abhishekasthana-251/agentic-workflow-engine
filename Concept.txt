@@ -1,0 +1,81 @@
+Agentic Ai is a type of Ai that can take up a task or goal from a user and then work toward completing it on its own, with minimal human guidance.
+It plans, takes action, adapts to changes, and seeks help only when necessary.
+
+Agentic AI ->(Autonomus , goal Oriented , planning ,Reasoning , adaptability, context awareness)
+
+
+Autonomy -> it's proactive ( execution , decision making, tool usage)
+
+    Autonomy can be controlled -> permission Scope , human in the loop, override controls, Guardrails/ Policies
+
+Goal Oriented ->(goals acts as a compass for autonomy , goals can come with constraints, Goals are stored in core memory)
+
+
+Planning-> is the agent's ability to break down a high-level goal into a structured sequence of actions or subgoals and decide the best path to achieve the desired outcome.
+
+    Step 1-> Generating multiple candidate plan
+    Step2 ->Evaluate each plan(efficiency , Tool Availablity ,cost , risk, alignment)
+    step3-> Select the best plan
+
+Reasoning->is the cognitive process through which an Agentic ai system interprets information, draws conclusions, and makes decision , both while planning ahead and while Excecuting action in real time.
+
+    Reasoning During Planning->(Goal Decomposition,tool selection, Resource Estimation)
+
+    Reasoning During execution( decision-making, Human in the loop handling , Error handling)
+
+
+Adaptability -> is the agent's ability to modify its plans, strategies , or actions in Response to unexpected conditions ,all while staying  aligned with the goal.
+    1. Failures
+    2. External Feedback(environmrent (on which area the agentic ai is working eg: Agentic Ai for chess ,so the envirnoment of that Agentic ai is chess))
+    3. Changing Goals
+
+Context awareness-> is the agent's ability to understand, retain, and utilize relevant information from the onging task , past interactions , user preferences , and envirnoment cues to make better decisions throughout a multi-step process.
+
+    A.type of context
+    1. the original goal
+    2. Process till now + interaction history
+    3. envirnoment state 
+    4. tool Responses
+    5. User specific preferences
+    6. Policy or Guardrails
+
+    B. Context awareness is implemented through memory
+    c. Short term memory
+    d. Long Term memory
+
+
+Components( Brain , Orchestrator, Tools , Memory , Supervisor)
+
+    Brain(LLM)-> Goal interpretation, Planning , Reasoning, Tool selection , Communication
+
+    Orchestrator(manager(Executer(if else)))-> Task sequence, conditional Routing, Retry Logic, Looping and iteration, delegation
+
+    Tools-> External Actions, Knowledge Base Access
+
+    Memory-> Short-Term Memory, Long-term memory, State Tracking
+
+    Supervisor-> Approval Request, Guardrails Enforcement, Edge Case Escalation
+
+
+LangGraph -> is an Orchestrator framework for building intelligent, stateful, and mulit step llm workflow
+
+features-> Parallelism, loops, branching, memory, and Resumability
+
+Graph of nodes(task) , and Edge(Routing)
+
+What is LLM Workflows ->Step by step Process using which we can build complex LLM Applications
+
+Common Workflows -> Prompt Chaining ,Routing , Parallelization , Orchestrator Worker , Evaluator Optimizer 
+
+Graph, Nodes ,And Edge
+
+State -> In LangGraph, state is the shared memory that flows  through your workflows - it holds all the data being passed between nodes as your Graph runs
+    accesible -> nodes
+    mutable at each node
+
+
+Reducers -> Reducers in LangGraph define how updates from nodes are applied to the shared state 
+    Each key in the state can have its own reducer, which determines whether new data replaces, merges ,or adds ,to the existing value.
+
+LangGraph execution Model( enspire by Google prgel)
+ Graph Definition , Compilation, Invocation , Super-steps Begin, Message Passing and Node Activation, Halting Condition
