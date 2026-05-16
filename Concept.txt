@@ -79,3 +79,16 @@ Reducers -> Reducers in LangGraph define how updates from nodes are applied to t
 
 LangGraph execution Model( enspire by Google prgel)
  Graph Definition , Compilation, Invocation , Super-steps Begin, Message Passing and Node Activation, Halting Condition
+
+ Persistence -> in LangGraph refers to the ability to save and  restore the state of a workflow over a time 
+
+ the Persistence store not only the final values, it also store the intermediate value
+
+ the Persistence help in  fault Tolerance
+
+ By using checkpointers, the Persistence is made
+ the checkpointers are noting it just store the all thing at superstep, the intermediate and final thing is store at every superstep (from one node to other node)
+
+Threads in Persistence -> provide a label for a conversation , same label =same memory
+
+ what Persistence provide -> short term memory , fault Tolerance, Human in the loop , time travel
